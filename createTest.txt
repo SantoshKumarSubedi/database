@@ -6,7 +6,7 @@ Script filess should structured, tidy and professional to aim usability
  
 */
  
- -- RunCommand EG @f:\databases\createtest.txt
+ -- RunCommand EG @E:\18406551\createtest.txt
  
  -- NOTE ORDER THE TABLES ARE CREATED, THE NOT NULLS AND DEFAULT VALUES
 
@@ -36,7 +36,12 @@ edition		NUMBER(2));
 CREATE TABLE loans(
 student_id      NUMBER(4),
 isbn     	NUMBER(2),
-loan_date	DATE);
+loan_date	DATE);	
 
-
-	
+CREATE TABLE CUSTUMERS(
+customer_id 	NUMBER(5),
+firstname		VARCHAR2(15),
+surname			VARCHAR2(20),
+dob				DATE,
+gender			CHAR,
+contact_number	VARCHAR2(15));

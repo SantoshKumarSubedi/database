@@ -7,11 +7,11 @@ Script filess should structured, tidy and professional to aim usability
 */
 
 -- Note the order of the tables
-
+RUN COMMAND :@E:/18406551/dropTest.txt
 -- DROP COMMANDS
 
 DROP TABLE loans;
 DROP TABLE books;
 DROP TABLE students;
 
-PURGE RECYCLEBIN;
+--PURGE RECYCLEBIN;
