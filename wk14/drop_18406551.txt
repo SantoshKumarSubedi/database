@@ -1,0 +1,82 @@
+--@C:\Users\Student\Desktop\database\wk14\drop_18406551.txt
+
+ALTER TABLE attendance
+DROP CONSTRAINT fk_a_students;
+
+ALTER TABLE attendance
+DROP CONSTRAINT fk_a_course_runs;
+
+ALTER TABLE attendance
+DROP CONSTRAINT pk_attendance;
+
+DROP TABLE attendance;
+
+ALTER TABLE invoices
+DROP CONSTRAINT fk_i_students;
+
+ALTER TABLE invoices
+DROP CONSTRAINT fk_i_companies;
+
+ALTER TABLE invoices
+DROP CONSTRAINT pk_invoices;
+
+DROP TABLE invoices;
+
+ALTER TABLE companies
+DROP CONSTRAINT pk_companies;
+
+DROP TABLE companies;
+
+
+Alter TABLE students
+DROP CONSTRAINT pk_students;
+
+ALTER TABLE students
+DROP CONSTRAINT ck_st_fname;
+
+ALTER TABLE students
+DROP CONSTRAINT ck_st_sname;
+
+DROP TABLE students;
+
+ALTER TABLE course_runs
+DROP CONSTRAINT fk_cr_trainers;
+
+ALTER TABLE course_runs
+DROP CONSTRAINT fk_cr_courses;
+
+ALTER TABLE course_runs
+DROP CONSTRAINT fk_cr_sites;
+
+ALTER TABLE course_runs
+DROP CONSTRAINT pk_course_runs;
+
+DROP TABLE course_runs;
+
+ALTER TABLE sites
+DROP CONSTRAINT pk_sites;
+
+DROP TABLE sites;
+
+ALTER TABLE trainers
+DROP CONSTRAINT pk_trainers;
+
+DROP TABLE trainers;
+
+ALTER TABLE courses
+DROP CONSTRAINT fk_c_subject_areas;
+
+ALTER TABLE courses
+DROP CONSTRAINT pk_courses;
+
+ALTER TABLE courses
+DROP CONSTRAINT ck_duration;
+
+DROP TABLE courses;
+
+ALTER TABLE subject_areas
+DROP CONSTRAINT pk_subject_areas;
+
+DROP TABLE subject_areas;
+
+PURGE RECYCLEBIN;

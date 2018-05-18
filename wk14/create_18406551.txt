@@ -1,0 +1,68 @@
+
+--@C:\Users\Student\Desktop\database\wk14\create_18406551.txt
+
+CREATE TABLE subject_areas(
+subject_id		 NUMBER(5),
+subject_name	 VARCHAR2(10),
+description		VARCHAR2(150)
+);
+
+CREATE TABLE courses(
+course_id 	NUMBER(5),
+course_title 	VARCHAR2(10),
+subject_id 	NUMBER(5),
+duration	 VARCHAR2(20),
+cost		NUMBER(8,2)
+);
+
+CREATE TABLE trainers(
+trainer_id		NUMBER(5),
+t_firstname		VARCHAR2(15),
+t_surname		VARCHAR2(15),
+mentor_id 		NUMBER(5),
+rate			NUMBER(10),
+contact_no		VARCHAR2(15)
+);
+
+CREATE TABLE sites(
+site_id 	NUMBER(5),
+site_name	VARCHAR2(15),
+loaction	VARCHAR2(20)
+);
+
+CREATE TABLE course_runs(
+running_id		NUMBER(5),
+site_id			NUMBER(5),
+course_id		NUMBER(5),
+trainer_id		NUMBER(5),
+start_date		DATE
+);
+
+CREATE TABLE students(
+student_id 		NUMBER(5),
+st_fname		VARCHAR2(15),
+st_sname		VARCHAR2(15),
+date_of_birth	DATE,
+address			VARCHAR2(20)
+);
+
+CREATE TABLE attendance(
+running_id		NUMBER(5),
+student_id		NUMBER(5),
+amount_paid		NUMBER(8,2)
+);
+
+CREATE TABLE companies(
+company_id		NUMBER(5),
+company_name	VARCHAR2(20),
+address			VARCHAR2(20),
+contact_no		VARCHAR2(15),
+no_of_emp		NUMBER(4)
+);
+
+CREATE TABLE invoices(
+invoice_id		NUMBER(5),
+company_id		NUMBER(5),
+student_id		NUMBER(5),
+billing_date	DATE
+);

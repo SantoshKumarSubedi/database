@@ -1,5 +1,5 @@
 
---@E:\shivani\creat_18413701.txt
+--@E:\santosh\creat_18413701.txt
 
 CREATE TABLE sites(
 site_id NUMBER(5),

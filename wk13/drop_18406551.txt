@@ -1,4 +1,4 @@
---@E:\shivani\drop_18413701.txt
+--@E:\santosh\drop_18413701.txt
 DROP TABLE sites;
 DROP TABLE trainers;
 DROP TABLE SUBJECT_AREAS;

@@ -1,4 +1,4 @@
---@E:\shivani\alter_18413701.txt
+--@E:\santosh\alter_18413701.txt
 /*
 ALTER TABLE sites MODIFY(
 location VARCHAR2(40));
