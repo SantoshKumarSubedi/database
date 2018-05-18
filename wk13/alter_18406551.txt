@@ -1,0 +1,100 @@
+--@E:\shivani\alter_18413701.txt
+/*
+ALTER TABLE sites MODIFY(
+location VARCHAR2(40));
+*/
+
+
+
+ /*
+ALTER TABLE TRAINERS MODIFY(
+contact_no VARCHAR2(10) NOT NULL);
+*/
+/*
+ALTER TABLE sites
+ADD CONSTRAINT pk_sites
+PRIMARY KEY (site_id);
+*/
+/*
+ALTER TABLE SUBJECT_AREAS
+ADD CONSTRAINT pk_SUBJECT_AREAS
+PRIMARY KEY (subject_id);
+
+
+ALTER TABLE TRAINERS
+ADD CONSTRAINT pk_TRAINERS
+PRIMARY KEY (trainer_id);
+*/
+/*
+ALTER TABLE students
+ADD CONSTRAINT pk_students
+PRIMARY KEY (date_of_birth);
+*/
+/*
+ALTER TABLE students
+ADD CONSTRAINT pk_students
+PRIMARY KEY (date_of_birth);
+*/
+/*
+ALTER TABLE students ADD(
+ DOB DATE);
+ */
+ /*
+ ALTER TABLE TRAINERS ADD(
+ car_reg VARCHAR2(30));
+ */
+ /*
+ ALTER TABLE TRAINERS
+ ADD CONSTRAINT u_car_reg
+ UNIQUE (car_reg);
+ */
+
+ ALTER TABLE courses
+ ADD CONSTRAINT pk_courses
+ PRIMARY KEY (course_id);
+ 
+ 
+ALTER TABLE courses
+ADD CONSTRAINT fk_c_subject_areas
+FOREIGN KEY (subject_id)
+REFERENCES subject_areas(subject_id);
+
+ALTER TABLE course_runs
+ADD CONSTRAINT fk_c_sites
+FOREIGN KEY (site_id)
+REFERENCES sites(site_id);
+
+ALTER TABLE course_runs
+ADD CONSTRAINT fk_c_courses
+FOREIGN KEY(course_id)
+REFERENCES courses(course_id);
+
+ALTER TABLE course_runs
+ADD CONSTRAINT fk_c_TRAINERS
+FOREIGN KEY (trainer_id)
+REFERENCES TRAINERS(trainer_id);
+
+							
+
+ALTER TABLE course_runs
+ADD CONSTRAINT pk_course_runs
+PRIMARY KEY (running_id);
+
+
+ALTER TABLE attendances
+ADD CONSTRAINT fk_c_course_runs
+FOREIGN KEY(running_id)
+REFERENCES course_runs(running_id);
+
+
+ALTER TABLE attendances
+ADD CONSTRAINT fk_c_students
+FOREIGN KEY (student_id)
+REFERENCES students(student_id);
+
+
+
+ALTER TABLE attendances
+ADD CONSTRAINT pk_attendances
+PRIMARY KEY(running_id,student_id);
+

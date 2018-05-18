@@ -1,0 +1,63 @@
+
+--@E:\shivani\creat_18413701.txt
+
+CREATE TABLE sites(
+site_id NUMBER(5),
+site_name VARCHAR2(20)
+);
+
+
+ALTER TABLE sites ADD(
+location VARCHAR2(30));
+
+CREATE TABLE SUBJECT_AREAS(
+subject_id NUMBER(12),
+subject_name VARCHAR2(7),
+description VARCHAR2(200));
+
+CREATE TABLE TRAINERS(
+trainer_id NUMBER(6),
+t_firstname VARCHAR2(8),
+t_surname VARCHAR2(7),
+mentor_id NUMBER(6),
+contact_no VARCHAR2(10),
+rate NUMBER(6));
+
+CREATE TABLE students(
+student_id NUMBER(6),
+st_fname VARCHAR2(10),
+st_sname VARCHAR2(8),
+address VARCHAR2(10),
+date_of_birth DATE);
+
+
+CREATE TABLE courses(
+course_id NUMBER(6),
+course_title VARCHAR2(8),
+subject_id NUMBER(6),
+duration VARCHAR2(8),
+cost NUMBER(10,2));
+
+
+CREATE TABLE course_runs(
+running_id NUMBER(6),
+site_id NUMBER(5),
+course_id NUMBER(6),
+trainer_id NUMBER(6),
+start_date DATE);
+
+
+
+CREATE TABLE attendances(
+running_id NUMBER(6),
+student_id NUMBER(6),
+amount_paid NUMBER(9,2));
+
+
+CREATE TABLE companies(
+company_id NUMBER(6),
+company_name VARCHAR2(10),
+address VARCHAR2(10),
+
+
+
