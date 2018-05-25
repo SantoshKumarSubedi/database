@@ -1,0 +1,18 @@
+INSERT INTO sites
+VALUES(seq_sites.NEXTVAL,'PARK CAMPUS','NORTHAMPTON');
+
+
+
+INSERT INTO courses(course_id,course_title,duration,cost)
+VALUES(1,'DATABASE',3,2500);
+
+INSERT INTO trainers(trainer_id,t_firstname,t_surname,rate,contact_no)
+VALUES(seq_trainers.NEXTVAL,'MANDY','MORREL',5.50,'01604 735500');
+
+UPDATE sites
+set location = 'KINGSTHORPE'
+where site_id = 1;
+
+UPDATE trainers
+set rate = (rate + 10)
+where trainer_id = 102;

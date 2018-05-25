@@ -33,6 +33,7 @@ DROP CONSTRAINT ck_st_sname;
 ALTER TABLE course_runs
 DROP CONSTRAINT fk_cr_trainers;
 
+
 ALTER TABLE course_runs
 DROP CONSTRAINT fk_cr_courses;
 
@@ -48,6 +49,9 @@ DROP CONSTRAINT pk_sites;
 ALTER TABLE trainers
 DROP CONSTRAINT pk_trainers;
 
+ALTER TABLE traners
+Drop CONSTRAINT fk_t_trainers;
+
 ALTER TABLE trainers
 DROP CONSTRAINT u_car_reg;
 
@@ -62,6 +66,11 @@ DROP CONSTRAINT ck_duration;
 
 ALTER TABLE subject_areas
 DROP CONSTRAINT pk_subject_areas;
+
+DROP SEQUENCE seq_invoice;
+DROP SEQUENCE seq_trainers;
+DROP SEQUENCE seq_sites;
+DROP SEQUENCE seq_students;
 
 DROP TABLE companies;
 DROP TABLE invoices;

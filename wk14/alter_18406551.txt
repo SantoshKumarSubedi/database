@@ -1,22 +1,27 @@
 --@C:\Users\Student\Desktop\database\wk14\alter_18406551.txt
 
+--add primary key to subject_areas
 ALTER TABLE subject_areas
 ADD CONSTRAINT pk_subject_areas
 PRIMARY KEY (subject_id);
 
+--add primary key in courses
 ALTER TABLE courses
 ADD CONSTRAINT pk_courses
 PRIMARY KEY (course_id);
 
+--add subject_areas foreign key in courses
 ALTER TABLE courses
 ADD CONSTRAINT fk_c_subject_areas
 FOREIGN KEY (subject_id)
 REFERENCES subject_areas(subject_id);
 
+--include check constraint in courses in column duration
 ALTER TABLE courses
 ADD CONSTRAINT ck_duration
 CHECK (duration IN(3,5));
 
+--add 
 ALTER TABLE trainers
 ADD CONSTRAINT pk_trainers
 PRIMARY KEY (trainer_id);
@@ -27,6 +32,11 @@ car_reg VARCHAR2(30));
 ALTER TABLE trainers
 ADD CONSTRAINT u_car_reg
 UNIQUE (car_reg);
+
+ALTER TABLE trainers
+ADD CONSTRAINT fk_t_trainers
+FOREIGN KEY(mentor_id)
+REFERENCES trainers(trainer_id);
 
 ALTER TABLE sites
 ADD CONSTRAINT pk_sites

@@ -1,35 +1,39 @@
 
 --@C:\Users\Student\Desktop\database\wk14\create_18406551.txt
-
+--creating subject_areas area table
 CREATE TABLE subject_areas(
 subject_id		 NUMBER(5),
 subject_name	 VARCHAR2(10),
 description		VARCHAR2(150)
 );
 
+--creating courses table
 CREATE TABLE courses(
 course_id 	NUMBER(5),
 course_title 	VARCHAR2(10),
 subject_id 	NUMBER(5),
-duration	 VARCHAR2(20),
+duration	 NUMBER(3),
 cost		NUMBER(8,2)
 );
 
+--creating trainers table
 CREATE TABLE trainers(
 trainer_id		NUMBER(5),
 t_firstname		VARCHAR2(15),
 t_surname		VARCHAR2(15),
 mentor_id 		NUMBER(5),
-rate			NUMBER(10),
+rate			NUMBER(8,2),
 contact_no		VARCHAR2(15)
 );
 
+--creating sites table
 CREATE TABLE sites(
 site_id 	NUMBER(5),
 site_name	VARCHAR2(15),
-loaction	VARCHAR2(20)
+location	VARCHAR2(20)
 );
 
+--creating course_runs table
 CREATE TABLE course_runs(
 running_id		NUMBER(5),
 site_id			NUMBER(5),
@@ -38,6 +42,7 @@ trainer_id		NUMBER(5),
 start_date		DATE
 );
 
+--creating students table
 CREATE TABLE students(
 student_id 		NUMBER(5),
 st_fname		VARCHAR2(15),
@@ -46,12 +51,14 @@ date_of_birth	DATE,
 address			VARCHAR2(20)
 );
 
+--creating attendance table
 CREATE TABLE attendance(
 running_id		NUMBER(5),
 student_id		NUMBER(5),
 amount_paid		NUMBER(8,2)
 );
 
+--creating companies table
 CREATE TABLE companies(
 company_id		NUMBER(5),
 company_name	VARCHAR2(20),
@@ -60,9 +67,31 @@ contact_no		VARCHAR2(15),
 no_of_emp		NUMBER(4)
 );
 
+--creating invoices table
 CREATE TABLE invoices(
 invoice_id		NUMBER(5),
 company_id		NUMBER(5),
 student_id		NUMBER(5),
 billing_date	DATE
 );
+
+--create sequence for invoice
+CREATE SEQUENCE seq_invoice
+INCREMENT BY 1
+START WITH 10000;
+
+--create sequence for trainers
+CREATE SEQUENCE seq_trainers
+INCREMENT BY 1
+START WITH 101;
+
+--create sequence for sites
+CREATE SEQUENCE seq_sites
+INCREMENT BY 1
+START WITH 1;
+
+--create sequence for students
+CREATE SEQUENCE seq_students
+INCREMENT BY 1
+START WITH 2000000
+MAXVALUE 3000000;
